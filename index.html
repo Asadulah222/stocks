@@ -3,94 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Menu</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<title>Learning Menu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  body{
+    margin:0;
+    font-family:system-ui, sans-serif;
+    background:#f4f6f8;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
+  /* top empty space */
+  .top-space{
+    height:60px;
   }
 
-  .menu-item {
-    background: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  .menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:16px;
+    padding:16px;
+    max-width:900px;
+    margin:auto;
   }
 
-  .menu-item:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    background: #e0ffe0;
+  .item{
+    background:#fff;
+    border-radius:16px;
+    padding:22px 10px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s ease;
+    cursor:pointer;
   }
 
-  .menu-item i {
-    font-size: 36px;
-    color: #4CAF50;
-    margin-bottom: 10px;
-    transition: transform 0.3s, color 0.3s;
+  .item:hover{
+    transform:translateY(-6px) scale(1.04);
+    box-shadow:0 16px 32px rgba(0,0,0,.15);
   }
 
-  .menu-item:hover i {
-    transform: rotate(15deg) scale(1.2);
-    color: #ff5722;
+  .item i{
+    font-size:36px;
+    margin-bottom:10px;
+    color:#4CAF50;
+    transition:.3s;
   }
 
-  .menu-item span {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 5px;
-    color: #333;
+  .item:hover i{
+    color:#ff5722;
+    transform:scale(1.2) rotate(10deg);
+  }
+
+  .item span{
+    display:block;
+    font-size:15px;
+    font-weight:600;
+    color:#333;
+  }
+
+  /* footer space */
+  .footer-space{
+    height:80px;
   }
 </style>
 </head>
 <body>
 
-<div class="grid">
-  <div class="menu-item">
-    <i class="fas fa-calculator"></i>
-    <span>Commission</span>
+<div class="top-space"></div>
+
+<div class="menu">
+  <div class="item">
+    <i class="fa-solid fa-square-root-variable"></i>
+    <span>Math Learning</span>
   </div>
-  <div class="menu-item">
-    <i class="fas fa-chart-line"></i>
-    <span>Profit/Loss</span>
+
+  <div class="item">
+    <i class="fa-solid fa-language"></i>
+    <span>English Learning</span>
   </div>
-  <div class="menu-item">
-    <i class="fas fa-bell"></i>
-    <span>Alerts</span>
+
+  <div class="item">
+    <i class="fa-solid fa-brain"></i>
+    <span>General Knowledge</span>
   </div>
-  <div class="menu-item">
-    <i class="fas fa-cog"></i>
-    <span>Settings</span>
+
+  <div class="item">
+    <i class="fa-solid fa-book-open"></i>
+    <span>Daily Practice</span>
   </div>
-  <div class="menu-item">
-    <i class="fas fa-envelope"></i>
-    <span>Messages</span>
-  </div>
-  <div class="menu-item">
-    <i class="fas fa-user"></i>
-    <span>Profile</span>
+
+  <div class="item">
+    <i class="fa-solid fa-mobile-screen-button"></i>
+    <span>More Apps</span>
   </div>
 </div>
+
+<div class="footer-space"></div>
 
 </body>
 </html>
